@@ -29,16 +29,9 @@ let openMenu = ref(false)
     bg-[#101010] 
     bg-opacity-80 
     flex 
-    items-center 
-    justify-between">
-      <div class="flex items-center ml-6">
-        <button type="button" class="rounded-full bg-black p-[1px] cursor-pointer">
-          <ChevronLeft fillColor="#FFFFFF" :size="30" />
-        </button>
-        <button type="button" class="rounded-full bg-black p-[1px] hover:bg-[#] ml-4 cursor-pointer">
-          <ChevronRight fillColor="#FFFFFF" :size="30" />
-        </button>
-      </div>
+    flex-col 
+    items-end 
+    justify-center">
       <button @click="openMenu = !openMenu" :class="openMenu ? 'bg-[#282828]' : 'bg-black'"
         class="bg-black hover:bg-[#282828] rounded-full p-0.5 mr-8 mt-0.5 cursor-pointer">
         <div class="flex items-center">
@@ -65,25 +58,19 @@ let openMenu = ref(false)
       <div class="my-8"></div>
       <ul>
         <RouterLink to="/">
-          <MenuItem class="ml-[1px]" :iconSize="23" name="Home" iconString="home" pageUrl="/" />
+          <MenuItem class="ml-[1px]" :iconSize="23" name="Trang chủ" iconString="home" pageUrl="/" />
         </RouterLink>
         <RouterLink to="/search">
-          <MenuItem class="ml-[1px]" :iconSize="24" name="Search" iconString="search" pageUrl="/search" />
+          <MenuItem class="ml-[1px]" :iconSize="24" name="Tìm kiếm" iconString="search" pageUrl="/search" />
         </RouterLink>
         <RouterLink to="/library">
-          <MenuItem class="ml-[2px]" :iconSize="23" name="Your Library" iconString="library" pageUrl="/library" />
+          <MenuItem class="ml-[2px]" :iconSize="23" name="Thư viện của tôi" iconString="library" pageUrl="/library" />
         </RouterLink>
         <div class="py-3.5"></div>
-        <MenuItem :iconSize="24" name="Create Playlist" iconString="playlist" pageUrl="/playlist" />
-        <MenuItem class="-ml-[1px]" :iconSize="27" name="Liked Songs" iconString="liked" pageUrl="/liked" />
+        <MenuItem :iconSize="24" name="Tạo album nhạc" iconString="playlist" pageUrl="/playlist" />
+        <MenuItem class="-ml-[1px]" :iconSize="27" name="Những bài hát ưa thích của tôi" iconString="liked" pageUrl="/liked" />
       </ul>
       <div class="border-b border-b-gray-700"></div>
-      <ul>
-        <li class="font-semibold text-[13px] mt-3 text-gray-300 hover:text-white">My Playlist #1</li>
-        <li class="font-semibold text-[13px] mt-3 text-gray-300 hover:text-white">My Playlist #2</li>
-        <li class="font-semibold text-[13px] mt-3 text-gray-300 hover:text-white">My Playlist #3</li>
-        <li class="font-semibold text-[13px] mt-3 text-gray-300 hover:text-white">My Playlist #4</li>
-      </ul>
     </div>
   </div>
   <div class="
