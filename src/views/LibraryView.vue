@@ -51,7 +51,7 @@ const playFunc = () => {
                     </div>
                     <div class="ml-2 flex">
                         <div class="circle mt-2 mr-2" />
-                        <span class="-ml-0.5">{{ artist.tracks.length }} songs</span>
+                        <span class="-ml-0.5">{{ artist.tracks.length }} bài hát</span>
                     </div>
                 </div>
 
@@ -74,7 +74,7 @@ const playFunc = () => {
         <div class="flex items-center justify-between px-5 pt-2">
             <div class="flex items-center justify-between text-gray-400">
                 <div class="mr-7">#</div>
-                <div class="text-sm">Title</div>
+                <div class="text-sm">Tên bài hát</div>
             </div>
             <div><ClockTimeThreeOutline fillColor="#FFFFFF" :size="18"/></div>
         </div>
